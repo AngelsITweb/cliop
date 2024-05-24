@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import coinImage from './images/Coin.png'; // Импортируем изображение из папки src/images
 import './Main.css';
 
 const Main = () => {
@@ -24,11 +23,6 @@ const Main = () => {
         localStorage.setItem('balance', newBalance);
     }, [balance]);
 
-    const resetBalance = useCallback(() => {
-        setBalance(0);
-        localStorage.setItem('balance', 0);
-    }, []);
-
     const progressPercentage = (balance / 5500) * 100;
 
     return (
@@ -42,7 +36,7 @@ const Main = () => {
                 </div>
             </div>
             <div className="coin-image" onClick={incrementBalance}>
-                <img src={coinImage} alt="Coin" />
+                <img src={`${process.env.PUBLIC_URL}/images/coin.png`} alt="Coin" />
             </div>
             <div className="progress-section">
                 <div className="progress-bar">
@@ -54,11 +48,9 @@ const Main = () => {
                 <button className="button" onClick={() => navigate('/frens')}>Frens</button>
                 <button className="button" onClick={() => navigate('/earn')}>Earn</button>
                 <button className="button" onClick={() => navigate('/boosts')}>Boosts</button>
-                <button className="button" onClick={resetBalance}>Reset</button>
             </div>
         </div>
     );
 };
 
 export default Main;
-
