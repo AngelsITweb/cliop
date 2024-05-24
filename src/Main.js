@@ -23,6 +23,11 @@ const Main = () => {
         localStorage.setItem('balance', newBalance);
     }, [balance]);
 
+    const resetBalance = useCallback(() => {
+        setBalance(0);
+        localStorage.setItem('balance', 0);
+    }, []);
+
     const progressPercentage = (balance / 5500) * 100;
 
     return (
@@ -36,7 +41,7 @@ const Main = () => {
                 </div>
             </div>
             <div className="coin-image" onClick={incrementBalance}>
-                <img src={`${process.env.PUBLIC_URL}/images/coin.png`} alt="Coin" />
+                <img src="https://ibb.co/zN1pnP5" alt="Coin" /> {/* Используем URL изображения */}
             </div>
             <div className="progress-section">
                 <div className="progress-bar">
@@ -48,11 +53,11 @@ const Main = () => {
                 <button className="button" onClick={() => navigate('/frens')}>Frens</button>
                 <button className="button" onClick={() => navigate('/earn')}>Earn</button>
                 <button className="button" onClick={() => navigate('/boosts')}>Boosts</button>
+                <button className="button" onClick={resetBalance}>Reset</button>
             </div>
         </div>
     );
 };
 
 export default Main;
-
 
