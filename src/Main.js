@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoins } from '@fortawesome/free-solid-svg-icons';
 import './Main.css';
 
 const Main = () => {
@@ -41,7 +43,7 @@ const Main = () => {
                 </div>
             </div>
             <div className="coin-image" onClick={incrementBalance}>
-                <img src="https://www.google.com/imgres?q=png%20картинка&imgurl=https%3A%2F%2Fe7.pngegg.com%2Fpngimages%2F742%2F749%2Fpng-clipart-computer-icons-learning-icon-design-boulon-text-hand-thumbnail.png&imgrefurl=https%3A%2F%2Fwww.pngegg.com%2Fru&docid=ThhZ84-syx5SWM&tbnid=0T8UyU9CIEyr-M&vet=12ahUKEwiu5qaj-6WGAxXEDxAIHXufCF0QM3oECB8QAA..i&w=348&h=348&hcb=2&ved=2ahUKEwiu5qaj-6WGAxXEDxAIHXufCF0QM3oECB8QAA" alt="Coin" /> {/* Используем URL изображения */}
+                <FontAwesomeIcon icon={faCoins} size="4x" /> {/* Используем иконку Font Awesome */}
             </div>
             <div className="progress-section">
                 <div className="progress-bar">
