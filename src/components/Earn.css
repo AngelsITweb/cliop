@@ -1,7 +1,7 @@
-.boosts {
+.earn {
     padding: 2rem;
     position: relative;
-    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    background: linear-gradient(135deg, #84fab0 0%, #455646 100%);
     min-height: 100vh;
 }
 
@@ -14,12 +14,12 @@
     color: black;
 }
 
-.boost-list ul {
+.tasks ul {
     list-style-type: none;
     padding: 0;
 }
 
-.boost-list li {
+.tasks li {
     background-color: #f0f0f0;
     margin: 0.5rem 0;
     padding: 0.5rem;
