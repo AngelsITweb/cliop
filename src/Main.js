@@ -36,7 +36,7 @@ const Main = () => {
                 </div>
             </div>
             <div className="coin-image" onClick={incrementBalance}>
-                <img src={`${process.env.PUBLIC_URL}/public/images/coin.png`} alt="Coin" />
+                <img src={`${process.env.PUBLIC_URL}/images/coin.png`} alt="Coin" />
             </div>
             <div className="progress-section">
                 <div className="progress-bar">
